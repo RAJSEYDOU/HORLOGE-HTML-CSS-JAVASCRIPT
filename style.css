@@ -1,0 +1,18 @@
+
+
+body{
+	background-color: black;
+	color:white;
+}
+.container{
+
+	position: absolute;
+	top:50%;
+	left: 40%;
+	font-size: 32px;
+	padding: 40px;
+	border:1px solid white;
+}
+.clock{
+	margin-left: 30px;
+}

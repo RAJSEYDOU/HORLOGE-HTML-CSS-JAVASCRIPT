@@ -1,0 +1,53 @@
+<!DOCTYPE>
+<html>
+
+<head>
+	<title>Clock</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+	<div class="container">
+		<div class="date"></div>
+		<div class="clock"></div>
+	</div>
+    
+</body>
+<script type="text/javascript">
+
+	function showDate(){
+	console.log("...Running")
+	let session="AM";
+    let date= new Date()
+	let hours= date.getHours()
+	let minutes= date.getMinutes()
+	let secondes= date.getSeconds()
+
+	//Parse Date()
+	const option= {weekday:"long",month:"short",day:"numeric",year:"numeric"}
+
+	
+document.querySelector(".date").innerHTML=date.toLocaleDateString("fr",option)
+	
+
+
+  session=(hours==12)?"PM":"AM"
+  hours=(hours<10)? "0"+hours:hours
+  minutes=(minutes<10)?"0"+minutes:minutes
+  secondes=(secondes<10)? "0" +secondes:secondes
+
+
+
+	let time=hours+ ":"+minutes+":"+secondes+ " "+session
+
+    
+	 document.querySelector('.clock').innerHTML=time
+	}
+	 
+	
+
+
+	 setInterval(showDate,500)
+</script>
+
+</html>
